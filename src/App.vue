@@ -1,7 +1,7 @@
 <template>
-  <Calendario/>
+  <Calendar/>
 </template>
 <script setup>
-import Calendario from "@/components/Calendario.vue";
+import Calendar from "@/components/Calendar.vue";
 
 </script>
