@@ -17,6 +17,7 @@
       <h3 class="text-xl text-center">{{currentMonthName}}, {{currentYear}}</h3>
         <div class="calendar-body grid grid-cols-7 gap-1 px-2">
       <div v-for="day in daysWeek" :key="day" class=" font-bold">{{day}}</div>
+      <div v-for="day in firstDay" :key="day" class=" font-bold">{{}}</div>
       <div :class="todayDate(date)" class="w-60" v-for="(date,idx) in lastDateOfMonth" v-bind:key="idx">{{date}}
     </div>
     </div>
