@@ -57,7 +57,7 @@ const currentMonthName = computed(()=>{
 const lastDateOfMonth = computed(()=>{
     return new Date(currentYear.value,currentMonthInNumber.value+1,0).getDate()});
     const firstDay = computed(() => {
-  return new Date(currentYear.value, currentMonthInNumber.value, 1).getDay();
+  return new Date(currentYear.value, currentMonthInNumber.value,0).getDay();
 });
 
 </script>
