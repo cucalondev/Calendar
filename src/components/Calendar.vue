@@ -1,6 +1,5 @@
 <template>
       <div id="calendar">
-    <div class="calendar-header">
       <div class="flex justify-between items-center px-2">
         <button @click="prev">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +12,6 @@
           </svg>
         </button>
       </div>
-    </div>
       <h3 class="text-xl text-center">{{currentMonthName}}, {{currentYear}}</h3>
         <div class="calendar-body grid grid-cols-7 gap-1 px-2">
       <div v-for="day in daysWeek" :key="day" class=" font-bold">{{day}}</div>
@@ -29,6 +27,7 @@ const daysWeek = ref(['Mon','Wed','Tue','Thu','Fri','Sat','Sun']);
 const currentMonthInNumber = ref(new Date().getMonth()) 
 const currentYear = ref(new Date().getFullYear());
 const show = ref(false);
+const showForm = ref(false);
 function prev(){
     if(currentMonthInNumber.value===0){
         currentYear.value--;
